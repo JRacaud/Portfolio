@@ -9,12 +9,12 @@
 <body>
     <div class="terminal">
         <header>
-            <h3 class="prompt">jracaud@portfolio:~$ <span class="command">whoami</span></h1>
+            <h3 class="prompt">$> <span class="command">whoami</span></h1>
             <h1>Jonathan Racaud</h2>
         </header>
 
         <section id="about">
-            <h3 class="prompt">jracaud@portfolio:~$ <span class="command">cat about.txt</span></h3>
+            <h3 class="prompt">$> <span class="command">cat about.txt</span></h3>
             <p>
                 Full-stack software engineer with experience building and integrating mobile (Swift), backend (C#), and embedded systems (Arduino, ESP32). 
                 I bridge low-level C/C++ libraries with high-level platforms and design modular, cross-platform solutions. 
@@ -25,21 +25,21 @@
         </section>
 
         <section id="projects">
-            <h3 class="prompt">jracaud@portfolio:~$ <span class="command">ls projects/</span></h3>
+            <h3 class="prompt">$> <span class="command">ls projects/</span></h3>
             
             <div class="project-grid">
                 <div class="project-card">
-                    <h4>Astro Mind</h4>
-                    <p>An AI-powered assistant with RAG capabilites.</p>
+                    <h4 class="project-title">Astro Mind</h4>
+                    <p class="project-description">An AI-powered assistant with RAG capabilites.</p>
                     <div class="project-links">
                         <a href="https://github.com/Jonathan-Racaud/Astro-Mind" target="_blank" class="btn">View Code</a>
-                        <a class="btn" onclick="openProject('https://ed-astro-mind.streamlit.app/?embed=true')">Try Me</a>
+                        <a class="btn" href="https://ed-astro-mind.streamlit.app" target="_blank">Try Me</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h4>AI Powered Writer Assistant</h4>
-                    <p>Generate compelling titles, descriptions, feedback, and visuals for your articles — all with AI.</p>
+                    <h4 class="project-title">AI Powered Writer Assistant</h4>
+                    <p class="project-description">Generate compelling titles, descriptions, feedback, and visuals for your articles — all with AI.</p>
                     <div class="project-links">
                         <a href="https://github.com/Jonathan-Racaud/Blog-LLM-Assistant" target="_blank" class="btn">View Repo</a>
                     </div>
@@ -47,28 +47,12 @@
             </div>
         </section>
 
-        <div id="project-viewer" class="hidden">
-            <div class="viewer-header">
-                <button class="btn" onclick="closeViewer()">Close</button>
-            </div>
-            <iframe id="project-frame" src=""></iframe>
-        </div>
-
         <footer>
-            <p class="prompt">jracaud@portfolio:~$ <span class="command">echo "Contact: contact@jracaud.com"</span></p>
+            <h3 class="prompt">$> <span class="command">contact-me</span></h3>
+            <ul>
+                <li><span>Email: </span><a href="mailto:contact@jracaud.com" class="email-link">contact@jracaud.com</a></li>
+            </ul>
         </footer>
     </div>
-
-    <script>
-        function openProject(url) {
-            document.getElementById('project-frame').src = url;
-            document.getElementById('project-viewer').classList.remove('hidden');
-        }
-
-        function closeViewer() {
-            document.getElementById('project-viewer').classList.add('hidden');
-            document.getElementById('project-frame').src = '';
-        }
-    </script>
 </body>
 </html>
