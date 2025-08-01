@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="terminal">
+        <header>
+            <h3 class="prompt">jracaud@portfolio:~$ <span class="command">whoami</span></h1>
+            <h1>Jonathan Racaud</h2>
+        </header>
+
+        <section id="about">
+            <h3 class="prompt">jracaud@portfolio:~$ <span class="command">cat about.txt</span></h3>
+            <p>
+                Full-stack software engineer with experience building and integrating mobile (Swift), backend (C#), and embedded systems (Arduino, ESP32). 
+                I bridge low-level C/C++ libraries with high-level platforms and design modular, cross-platform solutions. 
+                Currently expanding expertise in AI/ML applications through hands-on personal projects, with a focus on Retrieval-Augmented Generation (RAG), 
+                prompt engineering, and LLM integration. Skilled in agile development using Git, Jira, Confluence, and Trello. 
+                Driven to deliver robust, future-ready software by combining deep technical rigour with proactive innovation.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h3 class="prompt">jracaud@portfolio:~$ <span class="command">ls projects/</span></h3>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <h4>Astro Mind</h4>
+                    <p>An AI-powered assistant with RAG capabilites.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Jonathan-Racaud/Astro-Mind" target="_blank" class="btn">View Code</a>
+                        <a class="btn" onclick="openProject('https://ed-astro-mind.streamlit.app/?embed=true')">Try Me</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4>AI Powered Writer Assistant</h4>
+                    <p>Generate compelling titles, descriptions, feedback, and visuals for your articles — all with AI.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Jonathan-Racaud/Blog-LLM-Assistant" target="_blank" class="btn">View Repo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="project-viewer" class="hidden">
+            <div class="viewer-header">
+                <button class="btn" onclick="closeViewer()">Close</button>
+            </div>
+            <iframe id="project-frame" src=""></iframe>
+        </div>
+
+        <footer>
+            <p class="prompt">jracaud@portfolio:~$ <span class="command">echo "Contact: contact@jracaud.com"</span></p>
+        </footer>
+    </div>
+
+    <script>
+        function openProject(url) {
+            document.getElementById('project-frame').src = url;
+            document.getElementById('project-viewer').classList.remove('hidden');
+        }
+
+        function closeViewer() {
+            document.getElementById('project-viewer').classList.add('hidden');
+            document.getElementById('project-frame').src = '';
+        }
+    </script>
+</body>
+</html>
