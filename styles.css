@@ -1,11 +1,11 @@
 /* Terminal-style portfolio styling */
 
 :root {
-    --terminal-bg: #0E1019;
-    --terminal-text: #FFFAF4;
-    --terminal-text-secondary: #008DF8;
-    --terminal-border: #008DF8;
-    --terminal-highlight: #8CE10B;
+    --terminal-bg: #0e1019;
+    --terminal-text: #fffaf4;
+    --terminal-text-secondary: #008df8;
+    --terminal-border: #008df8;
+    --terminal-highlight: #8ce10b;
 }
 
 * {
@@ -17,7 +17,7 @@
 body {
     background-color: var(--terminal-bg);
     color: var(--terminal-text);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     line-height: 1.6;
     padding: 20px;
 }
@@ -32,7 +32,8 @@ body {
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
 }
 
-header h1, header h2 {
+header h1,
+header h2 {
     margin-bottom: 20px;
 }
 
@@ -116,7 +117,7 @@ header h1, header h2 {
     padding: 8px 15px;
     border-radius: 4px;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 0.9em;
     text-decoration: none;
     display: inline-block;
@@ -140,12 +141,12 @@ footer {
     text-align: left;
 }
 
-footer>ul {
+footer > ul {
     list-style-type: none;
 }
 
 .email-link {
-    color: var(--terminal-text-secondary)
+    color: var(--terminal-text-secondary);
 }
 
 /* Responsive design */
@@ -153,30 +154,17 @@ footer>ul {
     .terminal {
         padding: 15px;
     }
-    
+
     .project-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .project-links {
         flex-direction: column;
     }
-    
+
     .btn {
         width: 100%;
         text-align: center;
     }
-}
-
-/* Typing effect for prompt */
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.prompt::after {
-    content: "▋";
-    animation: blink 1s infinite;
-    margin-left: 5px;
 }
